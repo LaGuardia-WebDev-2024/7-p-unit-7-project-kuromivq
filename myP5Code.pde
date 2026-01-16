@@ -5,6 +5,11 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var x = 20;
+var UFO = 0;
+var beam1 = 21;
+var beam2 =210;
+var beam3 =170;
+var colorshade = 0;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -14,17 +19,28 @@ background(255,255,255,0);
 //star
 fill(42,92,170,100);
 ellipse(x,60,30,30);
-x = x + 1;
+x = x + 3;
 
-//path
-fill(42,92,170,100);
-triangle(21,47,21,52,17,19);
+//beam 
+fill(108, 196 + colorshade, 23 + colorshade);
+triangle(beam1,470,beam2,520,beam3,190);
+beam1 = beam1 + 5;
+beam2 = beam2 + 5;
+beam3 = beam3 + 5;
+
+
+//UFO
+fill(0,0,0);
+ellipse (169 + UFO,193,100,50);
+UFO = UFO + 5
+
+colorshade = colorshade + 1;
 
 
 
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
-
+if(mousePressed){}
 }
 
 
